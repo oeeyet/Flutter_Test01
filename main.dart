@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_3/screen_b.dart';
+import 'package:flutter_application_3/screen_c.dart';
 
 import 'screen_a.dart';
 
@@ -11,6 +13,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: ScreenA());
+    return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => ScreenA(),
+        '/b': (context) => ScreenB(),
+        '/c': (context) => ScreenC()
+      },
+    );
   }
 }
